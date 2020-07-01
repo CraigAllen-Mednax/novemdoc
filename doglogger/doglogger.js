@@ -535,7 +535,7 @@ class DogLogger {
     }
 }
 
-module.exports = {
-  default: DogLogger,
-  DogLogger
+export {
+    DogLogger as default,
+    DogLogger,
 }

@@ -10,6 +10,7 @@ const flat = require("flat");
 if (typeof(window) == "undefined")
 { // not windows, assume node
     dot = require("dot-object");
+
     _ = require('lodash');
     const packageLogger = require('./pkgLogger');
     log = packageLogger.subLogger('doc');
@@ -121,7 +122,7 @@ class NovemDoc
 
         if (this.doctype == undefined)
         {
-            this.doctype == "untyped";
+            this.doctype = "untyped";
         }
         this.mongodb = null;
     }
@@ -131,7 +132,7 @@ class NovemDoc
     static from_dict(obj)
     {
         //return new _DocumentClass({dict:obj});
-        
+
         const retval = new this({dict:obj});
         if (this.modelDoctype) {
             retval.doctype = this.modelDoctype;
@@ -514,13 +515,7 @@ class NovemDoc
 
 }
 
-if (typeof(window) === "undefined")
-{
-    exports.NovemDoc = NovemDoc;
-    // not windows, assume node
-}
-else
-{
-    // then we require anyway for babel... sigh
-    exports.NovemDoc  = NovemDoc;
+export {
+    NovemDoc as default,
+    NovemDoc
 }

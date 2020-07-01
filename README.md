@@ -30,14 +30,18 @@ in terms of nested maps and lists), the NovemDoc is as follows in practice:
   object oriented feature can be added, focus on the nested dict means this
   class plays well with code that handles the JSON object directly.
 
-Helps to:
+## Helps to:
 
 * store in mongo
 
+## Debugging/Logging
 
-Status:
+To get verbose logging set DEBUG=* (or other mask to filter particular log messages).
 
-I've built this type of class several times over the last year, this is just
+
+## Roadmap
+
+I've built this type of class several times over the last years, this is just
 the base of trying to make it one last time for reuse. Some of the things that
 I've done in such classes:
 
@@ -48,10 +52,6 @@ I've done in such classes:
 * document decomposition and recomposition
 * some sort of schema support
 
-Other things:
+###Other things:
 
 * graph db and graphql support
-
-### Debugging/Logging
-
-To get verbose logging set DEBUG=* (or other mask to filter particular log messages).

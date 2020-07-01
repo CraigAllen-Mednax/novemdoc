@@ -7,7 +7,8 @@ try {
     // never leave on, secret info:console.log("config7: localConfig", localConfig);
 } catch (error){
     // there is no local config
-    throw error;
+    console.log("There is no local novemdoc config");
+    // throw error;
 }
 
 let config = {
@@ -24,4 +25,7 @@ const configDoc = new NovemDoc({
         dict: config,
         });
 
-module.exports = configDoc;
+export {
+    configDoc as default,
+    configDoc
+}
