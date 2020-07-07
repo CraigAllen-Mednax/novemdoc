@@ -25,7 +25,7 @@ else
     _ = require('lodash');
     const packageLogger = require('./pkgLogger');
     log = packageLogger.subLogger('doc');
-    log.init("Loading NovemDoc in node backend...");
+    log.init("Loading NovemDoc in node frontent...");
     //NovemMongo = require('./novem_db/novemmongo');
     //@@PLAN: support logger in browser
     // log = something
